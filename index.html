@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="heading">
+        <h1>CarePlus</h1>
+        <p>Patient Follow-Up & Reminder System</p>
+    </header>
+    <main>
+        <div class="container">
+            <aside class="sidebar">
+                <button onclick="showPage('landing')"><i class="fa-solid fa-hospital"></i>Landing</button>
+                <button onclick=" showPage('loginpage')"><i class="fa-solid fa-right-to-bracket"></i>Login</button>
+                <button onclick=" showPage('Dashboard')"><i class="fa-solid fa-house"></i>Dashboard</button>
+                <button onclick=" showPage('patientlist')"><i class="fa-solid fa-user-group"></i>Patient List</button>
+                <button onclick=" showPage('patientprofile')"><i
+                        class="fa-solid fa-user-injured profile-icon"></i>Patient Profile</button>
+                <button onclick=" showPage('followup')"><i class="fa-solid fa-calendar-check"></i>Follow-Up
+                    Schedule</button>
+                <button onclick=" showPage('Medication')"><i class="fa-solid fa-pills"></i>Medication Remainder</button>
+                <button onclick=" showPage('Appointment')"><i class="fa-solid fa-clipboard-list"></i>Appointment
+                    History</button>
+                <button onclick=" showPage('notifications')"><i class="fa-solid fa-bell"></i>Notifications</button>
+                <button onclick=" showPage('Reports')"><i class="fa-solid fa-chart-column"></i>Reports</button>
+                <button onclick=" showPage('Profile')"><i class="fa-solid fa-user"></i>Profile</button>
+                <button onclick=" showPage('Settings')"><i class="fa-solid fa-gear"></i>Settings</button>
+                <button onclick=" showPage('help')"><i class="fa-solid fa-circle-question"></i>Help</button>
+            </aside>
+            <div class="content">
+                <!-- landing -->
+                <div class="page active" id="landing">
+                    <h1>Welcome to CarePlus</h1>
+                    <p>Careplus is a smart and user and user friendly Patient Follow-Up and Health Reminder System
+                        designed to help clinics and hospitals manage patient care digitally.</p>
+                </div>
+                <!-- loginpage -->
+                <div class="page" id="loginpage">
+                    <form action="">
+                        <h3>Login page</h3>
+                        <div class="inputbox">
+                            <label for="username">Username:</label>
+                            <input type="text" placeholder="Enter Username" required>
+                        </div>
+                        <div class="inputbox">
+                            <label for="Password">Password:</label>
+                            <input type="password" placeholder="Enter Password">
+                        </div>
+                        <button type="submit" class="loginbtn">Login</button>
+                    </form>
+                </div>
+                <!-- Dashboard -->
+                <div class="page" id="Dashboard">
+                    <div class="card">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="details">
+                            <p>Total Patient</p>
+                            <p> <span><strong>120</strong></span></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <div class="details">
+                            <p>Today's</p>
+                            <p>Appointments <span><strong>8</strong></span></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <div class="details">
+                            <p>Pending</p>
+                            <p>Follow-ups <span><strong>15</strong></span></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-bell"></i>
+                        <div class="details">
+                            <p>Medication</p>
+                            <p>Alerts <span><strong>5</strong></span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- patientList -->
+                <div class="page" id="patientlist">
+                    <div class="patientlist1">
+                        <p><span> <strong> ID:</strong></span>P001</p>
+                        <p><span><strong>Name:</strong></span>Indhu</p>
+                        <p><span> <strong>Age:</strong></span>21</p>
+                        <p><span><strong>Gender:</strong></span>Female</p>
+                        <p><span><strong>Contact:</strong></span>9433768093</p>
+                        <button>View</button>
+                    </div>
+                    <div class="patientlist1">
+                        <p><span><strong> ID:</strong></span>P001</p>
+                        <p><span><strong>Name:</strong></span>Priya</p>
+                        <p><span><strong>Age:</strong></span>25</p>
+                        <p><span><strong>Gender:</strong></span>Female</p>
+                        <p><span><strong>Contact:</strong></span>6453267906</p>
+                        <button>View</button>
+                    </div>
+                </div>
+                <!-- patientProfile -->
+                <div class="page" id="patientprofile">
+                    <div class="patient_profile_heading">
+                        <i class="fa-solid fa-user-injured profile-icon"></i>
+                        <span class="patient_profile_name"><strong>Patient Profile</strong></span>
+
+                    </div>
+
+                    <div class="profile_card">
+                        <div class="profile_header">
+                            <i class="fa-solid fa-user-injured profile-icon"></i>
+                            <div class="patientdetails">
+                                <h2 class="patientname">Sankar</h2>
+                                <p> <strong>Patient ID:</strong>P001</p>
+                            </div>
+                        </div>
+                        <div class="profile_details">
+                            <div><strong>Age:</strong>35</div>
+                            <div><strong>Gender</strong>male</div>
+                            <div><strong>Blood Group:</strong>O+</div>
+                            <div><strong>Phone:</strong>8965679897879</div>
+                            <div><strong>Email:</strong>Sankar27@gmail.com</div>
+                            <div><strong>Address:</strong>Chennai,Tamil Nadu</div>
+                        </div>
+                        <div class="Medical_info">
+                            <h4><i class="fa-solid fa-notes-medical"></i>Medical Details</h4>
+                            <hr>
+                            <ul class="disease">
+                                <li>Diabetes</li>
+                                <li>Blood pressure</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Followup -->
+                <div class="page" id="followup">
+                    <h2><i class="fa-solid fa-calendar-check"></i>Follow-Up Schedule</h2>
+                    <div class="add_followup">
+                        <h3>Add Follow-Up</h3>
+                        <hr>
+                        <div class="followup_form">
+                            <input class="patientnameinput" type="text" id="patientName" placeholder="Patient Name">
+                            <input class="dateinput" type="date" id="follow_date">
+                            <select id="status">
+                                <option value="">Select Status</option>
+                                <option value="Pending">Pending</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                            <button class="add_btn" type="submit">Add</button>
+                        </div>
+                    </div>
+                    <h3 class="followuplist_head">Follow_up List</h3>
+                    <div class="followupList">
+                        <div class="followup pending">
+                            <p><strong>Patient:</strong>Indhu</p>
+                            <p><strong>Date:</strong>22-jan-2026</p>
+                            <p><strong>Status:</strong><span class="pending_text">Pending</span></p>
+                        </div>
+                        <div class="followup completed">
+                            <p><strong>Patient:</strong>priya</p>
+                            <p><strong>Date:</strong>18-jan-2026</p>
+                            <p><strong>Status:</strong><span class="compelete_text">completed</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Medication Remainder -->
+                <div id="Medication" class="page">
+                    <div class="Medi_container">
+                        <h4><i class="fa-solid fa-pills"></i>Medication Remainder</h4>
+                        <div class="Medi_form">
+                            <input type="text" placeholder="Medicine Name">
+                            <input type="time">
+                            <button class="Medicine_add_btn">Add</button>
+                        </div>
+                        <div class="Reminder_list">
+                            <div class="Reminder list1">
+                                <div class="Medicine_detail">
+                                    <p><i class="fa-solid fa-capsules"></i>Aspirin</p>
+                                    <p><i class="fa-solid fa-clock"></i>09:00 AM</p>
+                                </div>
+                                <button>Edit</button>
+                            </div>
+                            <div class="Reminder list2">
+                                <div class="Medicine_detail">
+                                    <p><i class="fa-solid fa-capsules"></i>Vitamin D</p>
+                                    <p><i class="fa-solid fa-clock"></i>12:00 AM</p>
+                                </div>
+                                <button>Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Appointment History-->
+                <div class="page" id="Appointment">
+                    <h3 class="Appointmenthistory"><i class="fa-solid fa-clipboard-list"></i>Appointment History</h3>
+                    <div class="appointment_table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Patient</th>
+                                    <th>Doctor</th>
+                                    <th>Reason</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10-01-2026</td>
+                                    <td>Indhu</td>
+                                    <td>Dr. Arun</td>
+                                    <td>General Checkup</td>
+                                    <td class="completed_td">Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>12-01-2026</td>
+                                    <td>Sankar</td>
+                                    <td>Dr. Meena</td>
+                                    <td>Diabetes Review</td>
+                                    <td class="pending_td">Pending</td>
+                                </tr>
+                                <tr>
+                                    <td>05-01-2026</td>
+                                    <td>Priya</td>
+                                    <td>Dr. Kumar</td>
+                                    <td>Blood Test</td>
+                                    <td class="cancelled_td">Cancelled</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <!-- Notification -->
+                <div class="page" id="notifications">
+                    <h2 class="notification_head"><i class="fa-solid fa-bell"></i>Notifications</h2>
+                    <div class="Notification_list">
+                        <div class="notification one">
+                            <div class="first_content">
+                                <h4><i class="fa-solid fa-pills"></i>Medication Remainder</h4>
+                                <button class="Read_btn">Read</button>
+                                <button class="Delete_btn"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                            <p>Take BP tablet at 8:00 AM</p>
+                            <p>Today 7:50 AM</p>
+                        </div>
+                        <div class="notification two">
+                              <div class="first_content">
+                                <h4><i class="fa-solid fa-calendar-check"></i>Follow-Up Remainder</h4>
+                                <button class="Read_btn">Read</button>
+                                <button  class="Delete_btn"><i class="fa-regular fa-trash-can"></i></button>
+                              </div>
+                              <p>Indhu Follow-up scheduled today</p>
+                               <p>Today 9:00 AM</p>
+                        </div>
+                         <div class="notification three">
+                              <div class="first_content">
+                                <h4><i class="fa-solid fa-calendar-check"></i>New Patient Added</h4>
+                                <button  class="Delete_button"><i class="fa-regular fa-trash-can"></i></button>
+                              </div>
+                              <p>Priya added to patient list</p>
+                               <p>Yesterday 4:30 PM</p>
+                        </div>
+                    
+                    </div>
+                </div>
+                <!-- Reports -->
+                <div class="page" id="Reports">
+                    <div class="report_container">
+                         <h3 class="patientReport_head"><i class="fa-solid fa-chart-column"></i>Patient Reports</h3>
+                         <table>
+                         <thead>
+                            <tr>
+                                <th>Patient Name</th>
+                                <th>Report Type</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                             <td>Indhu</td>  
+                             <td>Blood Test</td>
+                             <td>24-02-2025</td>
+                             <td>Completed</td>
+                             <td><button class="view_btn">view</button></td>
+                            </tr>
+                             <tr>
+                             <td>Sankar</td>  
+                             <td>X-Ray</td>
+                             <td>26-08-2023</td>
+                             <td>pending</td>
+                             <td ><button class="view_btn">view</button></td>
+                            </tr>
+                         </tbody>
+                    </table>
+                    </div>
+                </div>
+                <!-- Profile page  -->
+              <div class="page profile" id="Profile">
+                 <h1 class="profile_heading"> <i class="fa-solid fa-user-group"></i>My Profile</h1>
+                <div class="Profile_container">
+                  <div class="profilecard">
+                    <div class="profile_name">
+                    <i class="fa-solid fa-user"></i>
+                    <span><b>Indhumathi</b> </span>
+                    </div>
+                    <p><strong>Email:</strong>indhumathi03@gmail.com</p>
+                    <p><strong>Phone:</strong>7854978498</p>
+                    <p><strong>Location:</strong>Chennai</p>
+                     <button class="edit_profile_btn">Edit Profile</button>
+                   </div>
+                   <div class="EditProfile_form">
+                    <h3>Edit Profile</h3>
+                    <input type="text" placeholder="Enter Your Name"><br>
+                    <input type="email" placeholder="Enter Your Email"><br>
+                    <input type="number" placeholder="Enter Phone Number"><br>
+                    <input type="text" placeholder="place"><br>
+                    <button class="Cancel_btn">Cancel</button>
+                    <button class="save_btn">Save</button>
+                   </div>
+                </div>
+             </div>
+             <!--settings -->
+               <div class="page" id="Settings">
+                <div class="settings">
+                    <h1><i class="fa-solid fa-gear"></i>Settings</h1>
+                <div class="profileSettings Card">
+                 <p><i class="fa-solid fa-user"></i> Profile Settings</p>
+                 <hr>
+                 <label for="Name">Name</label>
+                 <input type="text" placeholder="Enter Your Name"><br>
+                 <label for="Email">Email</label>
+                 <input type="email" placeholder="Enter Your Email">  <br>
+                   <button type="submit">Save Changes</button>
+                </div>
+                <div class="Set_Notification Card">
+                      <p><i class="fa-solid fa-bell"></i>Notifications</p>
+                      <hr>
+                      <div class="Email_Notification">
+                        <p>Email Notifications</p>
+                        <i class="fa-solid fa-toggle-off"></i>
+                      </div>
+                      <div class="Sms_Alert">
+                        <p>SMS Alerts</p>
+                        <i class="fa-solid fa-toggle-on"></i>
+                      </div>
+                </div>
+                <div class="Theme Card">
+                <p><i class="fa-solid fa-palette"></i>Theme</p>
+                <hr>
+                 <select name="Theme">
+                    <option value="Light">Light</option>
+                    <option value="Dark">Dark</option>
+                 </select>
+                </div>
+                <div class="changepassword Card">
+                      <p><i class="fa-solid fa-lock"></i>Change Password</p><hr>
+                    <div class="Current_Password">
+                      <label for="Current_Password">Current Password</label>
+                       <input type="password" placeholder="Current Password"><br>
+                    </div>
+                    <div class="New_Password">
+                    <label for="New_Password">New Password</label>
+                    <input type="password" placeholder="New Password">
+                    </div>
+                </div>
+                </div>
+            </div>
+               <!--help-->
+               <div class="page" id="help">
+                <div class="Help_Head">
+                    <h1><i class="fa-solid fa-circle-question"></i>Help Center</h1>
+                    <p>Find answers or contact support</p>
+                   <i class="fa-solid fa-magnifying-glass"></i> <input type="text" placeholder="  Search Help">
+                </div>
+                <div class="help_grid">
+                  <div class="help_card">
+                    <h4><i class="fa-solid fa-user-group"></i>Manage Patients</h4>
+                    <p>Learn how to add, edit and view patient details.</p>
+                  </div>
+                 <div class="help_card">
+                    <h4><i class="fa-solid fa-calendar-check"></i>Follow-Up Schedule</h4>
+                    <p>Steps to create and manage follow up reminders.</p>
+                 </div>
+                 <div class="help_card">
+                    <h4><i class="fa-solid fa-pills"></i>Medication Remainder</h4>
+                    <p>Set medicine reminders for patients easily</p>
+                 </div>
+                 <div class="help_card">
+                    <h4><i class="fa-solid fa-bell"></i>Notifications</h4>
+                    <p>Understand alerts and reminders.</p>
+                  </div>
+                </div>
+              <div class="Help_FAQ">
+               <h3>Frequently Asked Questions</h3><hr>
+               <details>
+                <summary>How to add a patient?</summary>
+                <p>Go to patient List -> Click Add Patient -> Enter Details -> Save</p>
+               </details><hr>
+               <details>
+                <summary> How to Edit Folow-up Schedule?</summary>
+                <p>Click Edit button in Follow-Up Page and Update details</p>
+                </details><hr>
+                <details>
+                    <summary>How to update profile?</summary>
+                    <p>Open Profile Page -> Click Edit -> Change details -> Save</p>
+                </details>
+              </div>
+              <div class="contact_support">
+               <h3><i class="fa-solid fa-headset"></i>Contact Support</h3><hr>
+               <p><span>Email:</span> support@careplus.com</p>
+               <p><span>Phone:</span> +91 9876890887</p>
+              </div>
+                 
+               </div>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

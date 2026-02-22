@@ -1,0 +1,877 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.heading {
+    background-color: #16A34A;
+    text-align: center;
+    padding: 20px;
+    color: #064E3B;
+  position: fixed;
+  width: 100%;
+  height: 120px;
+  top: 0;
+  left: 0;
+
+}
+.heading h1{
+    font-size: 40px;
+}
+.heading p{
+    font-size: 24px;
+    margin-top: 10px;
+}
+.sidebar {
+    background-color: #064E3B;
+    position: fixed;
+    top: 120px;
+    left: 0;
+    height: calc(100vh - 120px);
+    width: 220px;
+}
+
+.sidebar button {
+    display: block;
+    padding: 12px 10px;
+    font-size: 14px;
+    border: none;
+    background: transparent;
+    color: #ecfdf5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+.sidebar i{
+    padding-right: 40px;
+}
+
+.sidebar button:hover {
+    background-color: #16A34A;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+ 
+}
+.content{
+    margin-left: 220px;
+    margin-top: 120px;
+    min-height: calc(100vh - 120px);
+    background-color: #d7f5e0;
+    padding: 20px;
+    flex: 1;
+}
+/*landing*/
+
+#landing h1{
+   color: #14532d;
+   font-size: 40px;
+margin-left: 360px;
+margin-bottom: 30px;
+margin-top: 30px;
+}
+#landing p{
+    color: #374151;
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 720px;
+    margin-left: 250px;    
+}
+
+/* Login Page */
+#loginpage{
+   max-width: 400px;
+   margin:100px auto;
+   background-color:cadetblue;
+   border: 1px solid transparent;
+   border-radius: 20px;
+}
+#loginpage h3{
+    padding: 20px;
+    text-align: center;
+    
+}
+.inputbox {
+    padding:20px;
+    font-size: 16px;
+}
+.inputbox input{
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+}
+#loginpage button{
+    font-size: 24px;
+    background-color: #374151;
+    position: relative;
+    padding: 10px 20px;
+    margin:  20px 120px;
+     border-radius: 20px;
+     border: none;
+    color: #d7f5e0;
+}
+/* Dashboard */
+#Dashboard.active{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ gap: 25px;
+    
+}
+.card{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid  lightgrey;
+    background-color: #d7f5e0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+}
+.card i{
+    font-size: 30px;
+}
+.card .fa-clock-rotate-left{
+    color: green;
+    background-color: lightgreen;
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+}
+.card .fa-calendar-check{
+     color: darkgoldenrod;
+    background-color: lightyellow;
+    border: 1px solid transparent;
+    border-radius: 10px; 
+}
+.card .fa-user{
+     color: blue;
+    background-color: lightblue;
+    border: 1px solid transparent;
+    border-radius: 10px; 
+}
+.card  .fa-bell{
+     color: red;
+    background-color: lightcoral;
+    border: 1px solid transparent;
+    border-radius: 10px; 
+}
+.details p{
+    font-size: 20px;
+    padding-left: 20px;
+} 
+.details span{
+    font-size: 30px;
+}
+/* patientlist */
+#patientlist.active{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.patientlist1{
+    margin: 30px;
+    background-color:lightyellow;
+    padding: 30px;
+}
+.patientlist1 p{
+    padding: 5px;
+    font-size: 20px;
+}
+.patientlist1 button{
+font-size: 16px;
+padding:10px 20px;
+border-radius: 10px;
+border: none;
+margin-top: 10px;
+background-color: coral;
+}
+/* patient profile */
+.patient_profile_heading span{
+    font-size: 30px;
+    margin-top: 10px;
+    color: #14532d;
+}
+.profile_card{
+  background: #fff;
+  padding: 20px;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  margin: 30px;
+  position: relative;
+  left: 30px;
+}
+#patientprofile .profile-icon{
+  font-size: 40px;
+  color: #16A34A;
+}
+.profile_header{
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+}
+.patientdetails {
+    margin-left: 10px;
+    color: #064E3B;
+}
+.patientdetails h2{
+    margin-left: -32px;
+}
+.profile_details{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.profile_details div{
+  background:lightgreen;
+  padding: 10px;
+  border-radius: 6px;
+}
+.Medical_info{
+  border: 1px solid lightgrey;
+  background-color: lightgreen;
+}
+
+.Medical_info h4{
+  color: #064E3B;
+  margin-bottom: 5px;
+  padding: 8px;
+}
+.Medical_info i{
+    margin-right: 8px;
+}
+.Medical_info .disease{
+   padding: 8px 16px;
+}
+/* follow_up */
+.add_followup{
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    border-radius: 16px;
+    background-color:#d7f5e0;
+    width: 500px;
+}
+
+.add_followup h3{
+    padding: 10px;
+    color: #064E3B;
+    background-color: lightgreen;
+}
+.add_followup .patientnameinput{
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    width: 400px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ecfdf5;
+}
+.add_followup .dateinput{
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    width: 400px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ecfdf5;
+}
+.add_followup .followup_form select{
+     padding: 10px;
+     font-size: 16px;
+     margin:10px ;
+     border-radius:10px ;
+     border: none;
+     background-color: #ecfdf5;
+}
+.add_followup .add_btn{
+    padding: 12px 30px;
+    font-size: 20px;
+    border-radius:10px ;
+    background-color: #16A34A;
+    border: none;
+    color:#F0FDF4;
+}
+.followup_form{
+  margin: 20px;
+}
+.followup_form input{
+    display: block;
+}
+.followupList{
+    display: flex;
+    margin-left: 20px;
+}
+#followup h2{
+ margin: 10px;
+ color: #14532d;
+ font-size: 30px;
+}
+#followup h2 i{
+    color: #16A34A;
+    margin-right: 20px;
+}
+.followuplist_head{
+    margin-bottom: 10px;
+    color: #14532d;
+    margin-left: 10px;
+}
+.followup{
+    border: 1px solid lightgrey;
+    background-color: lightyellow;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 20px;
+}
+.followup p{
+    padding: 8px;
+    font-size: 20px;
+}
+.followup .compelete_text{
+    color: green;
+}
+.followup .pending_text{
+    color: darkorange;
+}
+/* Medication Remainder */
+#Medication{
+    border: 1px solid lightgray;
+    max-width: 500px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: auto;
+}
+.Medi_container h4{
+    font-size: 30px;
+    text-align: center;
+    color: #064E3B;
+}
+.Medi_container h4 i{
+    color: #16A34A;
+    margin-right: 20px;
+}
+.Medi_form{
+    background-color: ghostwhite;
+    padding: 10px;
+}
+.Medi_form input{
+    display: block;
+    padding: 10px;
+    width: 300px;
+    font: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    border: 1px solid lightgrey;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.Medi_form .Medicine_add_btn{
+    width: 300px;
+    padding: 10px 20px;
+    margin-left: 18px;
+    border-radius: 6px;
+    border: none;
+    background-color: #16A34A;
+    color: white;
+}
+.Reminder{
+    border: 1px solid lightgray;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.Reminder button{
+    background-color: rgb(79, 79, 253);
+    padding: 0px 30px;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+}
+.Reminder_list .list1{
+    background-color: rgb(204, 250, 204);
+}
+.Medicine_detail P{
+    padding:  5px 10px;
+}
+.Medicine_detail i{
+    margin-right: 10px;
+}
+.Medicine_detail .fa-capsules{
+    color: red;
+}
+/* Appointment History */
+.Appointmenthistory{
+    margin: 20px;
+    color: #064E3B;
+    font-size: 30px;
+}
+.Appointmenthistory i{
+    color: #16A34A;
+    margin-right: 20px;
+}
+.appointment_table{
+    padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+  font-size: 16px;
+}
+
+thead {
+  background-color: #16A34A;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #F0FDF4;
+}
+.completed_td {
+  color: green;
+  font-weight: bold;
+}
+
+.pending_td {
+  color: orange;
+  font-weight: bold;
+}
+
+.cancelled_td {
+  color: red;
+  font-weight: bold;
+}
+/* Notification Page */
+.notification_head{
+    color:#064E3B;
+    margin: 10px;
+    font-size: 30px;
+}
+.notification_head i{
+    color: #16A34A;
+    margin-right: 20px;
+}
+.Notification_list{
+    border: 1px solid rgba(0,0,0,0.1); 
+   background-color: #ecfdf5; 
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+border-radius: 10px;
+color: #14532d;
+margin: auto;
+max-width: 800px;
+}
+.notification{
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 20px;
+    padding-right: 30px;
+}
+.notification p{
+    padding-top: 8px;
+    padding-left: 16px;
+}
+.first_content{
+    display: flex;
+}
+.first_content .Read_btn{
+    background-color:#16A34A;
+    color:#d7f5e0;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 6px;
+    border: none;
+}
+.first_content .Delete_btn{
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    margin-left: 10px;
+    color:#fff;
+}
+.first_content h4{
+    font-size: 20px;
+
+}
+.first_content i{
+    margin-right: 10px;
+}
+.Delete_button{
+       color:#fff;
+      background-color: red;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    margin-left: 30px;
+}
+/* reports */
+
+.report_container table{
+   width: 70%;
+   margin: auto;
+   margin-top: 40px;
+}
+.patientReport_head{
+    margin: 10px 0px;
+    font-size: 30px;
+    color: #064E3B;
+    text-align: center;
+}
+.patientReport_head i{
+    color:#16A34A;
+    margin-right: 20px;
+}
+.view_btn{
+    background-color: #16A34A;
+    font-size: 20px;
+    color:#d7f5e0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+}
+/* profile page */
+.Profile_container{
+    display: flex;
+    align-items: center;
+    height: calc(100vh-123px);
+}
+.profile_heading{
+margin-top: 20px;
+margin-left: 10px;
+color:#14532d;
+}
+.profile_heading i{
+    color: #16A34A;
+    margin-right: 20px;
+}
+.profilecard{
+    position: relative;
+    left: 100px;
+    top: 20px;
+     border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    background-color:#ffffff;
+     border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+.profile_name{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.profile_name i{
+    font-size: 80px;
+    padding: 10px;
+    color: #14532d;
+    position: relative;
+    left: 50px;
+}
+.profile_name span{
+    margin: 10px;
+    font-size: 30px;
+    color: #064E3B;
+}
+.profilecard p{
+    padding: 10px;
+}
+.edit_profile_btn{
+    padding:10px 60px;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color:#16A34A;
+    border: none;
+    color: #fff;
+}
+.EditProfile_form{
+    border: 1px solid black;
+    position: relative;
+    left: 150px;
+    top: 20px;
+    padding: 20px;
+     background-color:#ffffff;
+     border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.EditProfile_form h3{
+    margin: 10px;
+    color: #064E3B;
+    text-align: center;
+}
+.EditProfile_form input{
+    margin: 10px;
+    padding: 10px 30px;
+    font-size: 12px;
+    background-color:#ffffff;
+     border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.EditProfile_form .Cancel_btn{
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+     border: none;
+}
+.EditProfile_form .save_btn{
+    font-size: 16px;
+    padding:  10px 20px;
+    margin: 10px;
+     border-radius: 10px;
+     border: none;
+     background-color: #16A34A;
+   color: #fff;
+}
+
+/*Settings*/
+.settings h1{
+padding: 10px;
+color: #064E3B;
+margin-left: 20px;
+}
+.settings .fa-gear{
+    color: #16A34A;
+    margin-right: 10px;
+}
+.Card{
+    border: 1px solid green;
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    width: 600px;
+}
+.profileSettings p{
+    margin: 10px;
+    font-size: 20px;
+}
+.Card p i{
+    color: #16A34A;
+}
+.profileSettings input {
+     margin-left: 60px;
+     margin-top: 30px;
+     margin-right: 20px;
+     padding:5px 20px ;
+     font-size: 16px;
+     background-color:#F0FDF4;
+     border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 400px;
+}
+.profileSettings label{
+    margin-left: 20px;
+    font-size: 20px;
+}
+.profileSettings button{
+    background-color: #16A34A;
+    color:#fff;
+    position: relative;
+    left: 135px;
+    padding: 5px 75px;
+    margin-top: 20px ;
+    border: none;
+    border-radius: 5px;
+    width: 400px;
+    font-size: 20px;
+}
+.Set_Notification p{
+    margin: 10px;
+    font-size: 20px;
+}
+.Email_Notification{
+    display: flex;
+   justify-content: space-between;
+   margin: 10px;
+}
+.Sms_Alert{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.Email_Notification i{
+    font-size: 40px;
+}
+.Email_Notification p{
+    font-size: 20px;
+}
+.Sms_Alert i{
+    font-size: 40px;
+    color: green;
+}
+.Sms_Alert p{
+    font-size: 20px;
+}
+.Theme select{
+ width: 550px;
+ margin: 20px;
+font-size: 20px;
+padding: 10px 20px;
+ border: 1px solid rgba(0,0,0,0.1);
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.Theme p{
+      margin: 10px;
+    font-size: 20px;
+}
+.Current_Password input {
+     margin-left: 50px;
+     padding:5px 20px ;
+     font-size: 16px;
+     background-color:#F0FDF4;
+     border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    margin-top: 20px;
+}
+.changepassword  label{
+    margin-left: 20px;
+    font-size: 20px;
+}
+.changepassword p{
+    margin: 10px;
+    font-size: 20px;
+}
+.New_Password input{
+   margin-left: 80px;
+   padding:5px 20px ;
+     font-size: 16px;
+     background-color:#F0FDF4;
+     border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    margin-top: 20px;
+}
+/*Help*/
+.Help_Head h1{
+    color: #064E3B;
+}
+.Help_Head h1  i{
+color: #16A34A;
+margin-right: 20px;
+}
+.Help_Head p{
+    font-size: 20px;
+    opacity: 0.7;
+    padding: 10px;
+}
+.Help_Head input{
+ width: 500px;
+ background-color:#F0FDF4;
+border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+ padding: 5px 30px;
+ font-size: 20px;
+ margin-left: -15px;
+}
+.Help_Head .fa-magnifying-glass{
+    position: relative;
+    left: 20px;
+}
+.help_grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.help_card{
+     background-color:#F0FDF4;
+border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin:20px  0px;
+    max-width: 300px;
+    padding: 20px;
+}
+.help_card h4{
+    color:#064E3B;
+    font-size: 20px;
+}
+.help_card h4 i{
+    color: #16A34A;
+    margin-right: 10px;
+}
+.help_card p{
+    padding:20px 0 ;
+}
+.Help_FAQ{
+        background-color:#F0FDF4;
+border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 10px;
+    max-width: 850px;
+    margin-top: 10px;
+}
+.Help_FAQ h3{
+    padding: 10px;
+    color: #064E3B;
+}
+details{
+    padding: 10px;
+}
+details summary{
+    padding: 10px;
+    color: #16A34A;
+}
+.contact_support{
+      background-color:#F0FDF4;
+border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width:850px ;
+    margin-top: 20px;
+}
+.contact_support h3{
+    padding: 10px;
+    color: #064E3B;
+}
+.contact_support h3 i{
+    color: #16A34A;
+    margin-right: 10px;
+}
+.contact_support p{
+    padding: 10px;
+}
+.contact_support p span{
+    font-weight: bold;
+    margin-right: 10px;
+}
